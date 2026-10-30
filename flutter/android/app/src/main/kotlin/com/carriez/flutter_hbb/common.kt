@@ -162,7 +162,9 @@ fun getScreenSize(windowManager: WindowManager) : Pair<Int, Int>{
     return Pair(w, h)
 }
 
+const val APP_DISPLAY_NAME = "远程协助"
+
  fun translate(input: String): String {
     Log.d("common", "translate:$LOCAL_NAME")
-    return FFI.translateLocale(LOCAL_NAME, input)
+    return FFI.translateLocale(LOCAL_NAME, input).replace("RustDesk", APP_DISPLAY_NAME)
 }

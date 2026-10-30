@@ -1607,7 +1607,9 @@ String translate(String name) {
   if (name.startsWith('Failed to') && name.contains(': ')) {
     return name.split(': ').map((x) => translate(x)).join(': ');
   }
-  return platformFFI.translate(name, localeName);
+  return platformFFI
+      .translate(name, localeName)
+      .replaceAll("RustDesk", kAppDisplayName);
 }
 
 // This function must be kept the same as the one in rust and sciter code.

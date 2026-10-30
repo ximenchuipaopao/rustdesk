@@ -42,6 +42,11 @@ const String kPeerPlatformWebDesktop = "WebDesktop";
 
 const double kScrollbarThickness = 12.0;
 
+/// White-label display name. The Rust core still reports "RustDesk" from
+/// `mainGetAppNameSync`, and the translation tables embed that word in many
+/// strings, so both are rewritten to this on the Dart side.
+const String kAppDisplayName = "远程协助";
+
 /// [kAppTypeMain] used by 'Desktop Main Page' , 'Mobile (Client and Server)', "Install Page"
 const String kAppTypeMain = "main";
 
