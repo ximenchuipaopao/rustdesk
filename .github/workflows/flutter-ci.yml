@@ -2,20 +2,11 @@ name: Full Flutter CI
 
 on:
   workflow_dispatch:
+  # push trigger disabled: builds are started manually from the Actions page
   pull_request:
     paths-ignore:
     - "docs/**"
     - "README.md"
-  push:
-    branches:
-      - master
-    paths-ignore:
-      - ".github/**"
-      - "docs/**"
-      - "README.md"
-      - "res/**"
-      - "appimage/**"
-      - "flatpak/**"
 
 jobs:
   run-ci:
