@@ -1,9 +1,9 @@
 name: Flutter Nightly Build
 
 on:
-  schedule:
-    # schedule build every night
-    - cron: "0 0 * * *"
+  # Daily schedule removed: GitHub disables Actions on forks that run inherited
+  # scheduled builds, and a nightly full cross-platform build is useless here.
+  # Still startable by hand from the Actions page when needed.
   workflow_dispatch:
 
 jobs:
